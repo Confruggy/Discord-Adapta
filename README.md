@@ -2,7 +2,7 @@
 
 The following is a BeautifulDiscord theme based on the [Adapta Nokto](https://github.com/adapta-project/adapta-gtk-theme) GTK theme, originally created by the user TheBITLINK#3141 on Discord. However I wasnt happy with the colors being used (blue isnt really my style). So I chose to remix it into the much darker colors that can be seen in the following screenshot.
 
-![Screenshot](screenshot.png)
+![Screenshot](jake_screenshot.png)
 
 Packaged you will find `discord-adapta-jakeoid.css`, my remix of the CSS, and the original CSS, `discord-adapta-original.css`. Alongside this the CSS is formatted the same as the original, I had access to a much earlier version and sorted it myself before TheBITLINK did!
 
