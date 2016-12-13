@@ -1,16 +1,17 @@
-/*
+/*  
 
-	JAKEOID FLAT DISCORD THEME
-	--------------------------
+	JAKEOID FLAT DISCORD THEME (V0.2)
+	---------------------------------
 
-	A fork of TheBITLINK#3141's theme, i've remixed everything
-	into a much darker color and to use my custom logo. Some
-	people were interested in using this theme and thus I 
-	released it.
+	A fork of TheBITLINK#3141's theme, i've remixed most
+if not everything into a much darker color and to use my 
+custom logo. Some people were interested in using this 
+custom version of the Adapta theme and thus I released 
+it to the public.
 
-	The setup to the files is very different to the original fork
-	as when I received the theme was before TheBITLINK sorted his
-	his files.
+	The setup in which the file is actually made differs
+heavily from the work that was completed by TheBITLINK
+thus, please keep that in mind when looking through.
 
 */
 
@@ -23,6 +24,28 @@ body {
 }
 
 /* ---------------- */
+
+/* ---- profile ---- */
+
+.activity{
+	visibility:hidden;
+	padding-left:12px;
+	padding-right:12px;
+	letter-spacing:-8px;
+}
+
+.activity strong{
+	visibility:visible!important;
+	-webkit-filter:brightness(700%)!important;
+	width:220px!important;
+	letter-spacing:0px!important;
+}
+
+/* Change the playing prefix here. */
+.activity strong:before{
+	content:"🎮 "!important;
+	padding-right: 5px;
+}
 
 /* ---- modals ---- */
 
@@ -46,6 +69,40 @@ body {
 	text-indent: 24px;
 	color: #1d1d1d;
 	padding-top: 32px;
+}
+
+.modal .download-button {
+	float: left;
+	background: #1d1d1d;
+	padding: 10px 5px 5px 10px;
+	opacity: 1;
+	border-radius: 2px;
+	font-size: 1px;
+	color: transparent;
+}
+
+.modal .download-button:before {
+	content: 'owopen';
+	font-size: 16px;
+	color: #fff;
+}
+
+.markdown-modal.selectable .scroller {
+	color: #1d1d1d;
+	font-size: 16px;
+	text-align: left;
+}
+
+.markdown-modal .markdown-modal-header {
+	padding: 10px 20px !important;
+}
+
+.markdown-modal .markdown-modal-header {
+	text-align: center;
+}
+
+.markdown-modal .markdown-modal-header .markdown-modal-close {
+	display: none;
 }
 
 /* ---------------- */
@@ -105,14 +162,13 @@ body {
 
 /* ---- tooltips ---- */
 
-.tooltip.tooltip-right.tooltip-normal, .tooltip.tooltip-top.tooltip-normal {
+.tooltip.tooltip-right.tooltip-normal, .tooltip.tooltip-bottom.tooltip-normal, .tooltip.tooltip-top.tooltip-normal {
 	background: #131313;
 	color: #fff;
 }
 
-.tooltip.tooltip-right.tooltip-normal:after, .tooltip.tooltip-top:after {
-	border-right-color: #131313;
-	border-top-color: #131313;
+.tooltip.tooltip-right.tooltip-normal:after, .tooltip.tooltip-bottom:after, .tooltip.tooltip-top:after {
+	border-color: #131313;
 	color: #fff;
 }
 
@@ -517,6 +573,15 @@ pre, .messages-popout .message-group, .invite-button {
 
 /* ---- etc ---- */
 
+.theme-dark .header-toolbar .separator {
+	opacity: 0;
+}
+
+.theme-dark .chat .title-wrap .topic:before {
+	display: none;
+}
+
+
 .theme-dark.context-menu .item-subMenu {
 	background: rgba(255,255,255,0.02);
 }
@@ -549,4 +614,177 @@ div.guilds-wrapper > div > div > div:nth-child(1) > div {
 	box-shadow: none;
 }
 
+/* ------------- */ 
+
+/* ---- voice ---- */
+
+#voice-connection {
+	animation: voice-anim 1s;
+}
+
+#voice-connection-popout hr {
+	opacity: 0;
+}
+
+#voice-connection-popout section p {
+	color: #fff !important;
+	padding: 10px;
+}
+
+#voice-connection-popout .debug-button {
+	color: #fff;
+}	
+
+/* --------------- */
+
+/* ---- popout ---- */
+
+.popout-bottom {
+	height: 154px !important; 
+	width: 216px !important;
+	visibility: hidden;
+}
+
+.popout header {
+	background: #111111;
+}
+
+.popout section {
+	background: #181818;
+}
+
+.popout.popout-top section:after, .popout.popout-top-right section:after {
+	border-top-color: #181818;
+}
+
+
+.user-popout .username-wrapper.has-nickname .discriminator, .user-popout .username-wrapper.has-nickname .username {
+	color: #fff;
+}
+
+/* ---------------- */
+
+/* ---- connecting ---- */
+
+.connecting {
+	background: #1d1d1d;
+}
+
+.connecting video.ready {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.connecting video {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+/* ------------------ */
+
+/* ---- user popout ---- */
+
+.user-popout .header {
+	background: #111111;
+}
+
+.user-popout .body {
+	background: #181818;
+}
+
+.user-popout .body .section .label {
+	color: #fff;
+}
+
+.member-roles .member-role {
+	background: rgba(255,255,255,0.2);
+	color: #fff !important;
+}
+
+div.username-wrapper > div.discord-tag > span.bot-tag.bot-tag-invert {
+	color: #111111 !important;
+	font-weight: bolder;
+	padding: 2px;
+}
+
+#voice-connection .btn:active, .account .btn:active {
+	background: rgba(0,0,0,0.4);
+}
+
+.quick-message {
+	border: none;
+	background: #111111;
+	color: #fff;
+}
+
+.user-popout .body .section .label .icon {
+	display: none;
+}
+
+.user-popout .avatar-wrapper .avatar-popout .status {
+	box-shadow: none;
+}
+
+.user-popout .footer {
+	background: #181818;
+	border: none;
+}
+
+div.section.notes {
+	display: none !important;
+}
+
+.user-popout .avatar-wrapper .avatar-popout {
+	border: none;
+}
+
+.update-notice {
+	display: none;
+}
+
+/* ----------------------- */
+
+/* ---- name ---- */
+
+/* WHITE NAME SCRUBS */
+.user-name:not([style]):after {
+	font-family: "Roboto";
+	content: "White Name";
+	visibility: visible !important;
+	background: #fff;
+	font-size: 13px;
+	font-weight: 1000;
+	color: #1d1d1d!important;
+	margin-left: 5px;
+	margin-right: 0px;
+	padding: 1px 3px;
+	border-radius:2px;
+	text-transform:uppercase;
+	vertical-align:bottom;
+	line-height:16px;
+	flex-shrink:0;
+}
+
+/** UGLY KAOSHAVEN **/
+.user-name[style*="87, 6, 121"], .member-username[style*="87, 6, 121"] {
+	color: #ff8e00 !important;
+}
+
+/* -------------- */
+
+/* ---- tag ---- */
+
+.bot-tag {
+	background: transparent;
+	color: inherit !important;
+	border: 1px solid;
+	font-weight: bolder;
+}
+
 /* ------------- */
+
+/* ---- animation ---- */
+
+@keyframes voice-anim {from {transform: translate(0, 100%);opacity: 0;}to {transform: translate(0, 0);opacity: 1;}}
+
+/* ------------------- */
